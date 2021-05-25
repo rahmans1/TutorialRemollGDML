@@ -1,8 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<gdml xsi:noNamespaceSchemaLocation="schema/gdml.xsd">
+<gdml xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://service-spi.web.cern.ch/service-spi/app/releases/GDML/schema/gdml.xsd">
 
 <define>
-	<position name="TrackerinWorldpos" unit="mm" x="0" y="0" z="100"/>
+	<position name="TrackerinWorldpos" unit="mm" x="0" y="0" z="50"/>
+        <rotation name="TrackerinWorldrot" unit="deg" x="0" y="0" z="45"/>
+
 </define>
 
 <materials>
@@ -27,7 +29,7 @@
 
 	<volume name="World" >
 		<materialref ref="Air" />
-		<solidref ref="world" />
+		<solidref ref="World" />
 		<physvol>
 			<volumeref ref="Tracker" />
 			<positionref ref="TrackerinWorldpos"/>
